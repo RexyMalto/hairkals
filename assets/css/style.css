@@ -1,0 +1,487 @@
+/* assets/css/style.css */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f8f9fa; /* Light background for the overall page */
+    display: flex; /* Enable flexbox for the body */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes at least 100% of viewport height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    flex: 1; /* This makes the main content area grow and push the footer down */
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* General Card Styling (Applies to all pages by default) */
+.card {
+    border-radius: 0.75rem; /* Consistent rounded corners */
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); /* Subtle shadow for general cards */
+    border: 1px solid rgba(0,0,0,.125); /* Re-add a light border for general cards */
+}
+
+/* Navbar Logo Styling */
+/* Specific targeting for navbar logos */
+
+.card-header {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    font-weight: bold;
+    background-color: #000000; /* Changed to black */
+    color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,4);
+}
+
+/* General Button Styling */
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #000000; /* Bootstrap primary blue */
+    border-color: #000000;
+}
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: #198754; /* Bootstrap success green */
+    border-color: #198754;
+}
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Bootstrap danger red */
+    border-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* General Form Control Styling */
+.form-control, .form-select {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+}
+
+/* Table styling (general for all tables) */
+.table {
+    border-radius: 0.75rem;
+    overflow: hidden; /* Ensures rounded corners on table if background is applied */
+}
+.table thead th {
+    background-color: #f8f9fa; /* Light grey header */
+    border-bottom: 2px solid #dee2e6;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+
+/* --- ADMIN DASHBOARD SPECIFIC STYLING (only applies to admin/dashboard.php) --- */
+.admin-dashboard-container {
+    background-color: #f7f9fc; /* Light background for the dashboard area */
+    padding: 2.5rem 2rem; /* More padding for spacious feel */
+    border-radius: 1rem; /* Slightly more rounded corners for the main container */
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05); /* Soft, subtle shadow for depth */
+    margin-top: 1rem; /* Adjust if needed based on main container's margin */
+    margin-bottom: 1rem;
+}
+
+.admin-dashboard-container .dashboard-title-header {
+    color: #2c3e50; /* Darker, professional text for header */
+    font-weight: 700; /* Bolder font */
+    font-size: 2.2rem;
+    margin-bottom: 2rem; /* More space below title */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-dashboard-container .admin-dashboard-button {
+    background-color: #e9ecef; /* Light grey button */
+    color: #495057; /* Darker text */
+    border: 1px solid #ced4da;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.admin-dashboard-container .admin-dashboard-button:hover {
+    background-color: #dee2e6;
+    color: #212529;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Info Cards Styling within Admin Dashboard */
+.admin-dashboard-container .info-cards-container {
+    margin-bottom: 2.5rem; /* Space below info cards */
+}
+
+.admin-dashboard-container .dashboard-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 2rem; /* Generous padding */
+    border-radius: 0.85rem; /* More rounded corners */
+    overflow: hidden;
+    position: relative;
+    color: #34495e; /* Text color for card content */
+    background-color: #ffffff;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1); /* Pronounced, softer shadow */
+    min-height: 120px; /* Taller cards */
+    border: none; /* Remove default Bootstrap card border */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.admin-dashboard-container .dashboard-card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.admin-dashboard-container .dashboard-card .card-content {
+    flex-grow: 1;
+}
+
+.admin-dashboard-container .dashboard-card .card-title {
+    font-size: 0.95rem; /* Slightly larger title */
+    font-weight: 600; /* Bolder */
+    text-transform: uppercase;
+    color: #7f8c8d !important; /* Muted grey for titles */
+    letter-spacing: 0.05em; /* Slight letter spacing */
+    margin-bottom: 0.75rem;
+}
+
+.admin-dashboard-container .dashboard-card .card-value {
+    font-size: 2.8rem; /* Larger numbers */
+    font-weight: 700; /* Very bold */
+    line-height: 1;
+    color: #2c3e50; /* Darker value color */
+}
+
+.admin-dashboard-container .dashboard-card .card-icon {
+    width: 70px; /* Larger icon circle */
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Larger icon */
+    color: #ffffff; /* Icon color is white */
+    margin-left: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.15); /* Distinct shadow for icons */
+}
+
+/* Professional Color Palette for Icons (matching image's feel) */
+.admin-dashboard-container .card-icon-blue { background-color: #4a90e2 !important; }
+.admin-dashboard-container .card-icon-green { background-color: #50c47b !important; }
+.admin-dashboard-container .card-icon-red { background-color: #e74c3c !important; }
+.admin-dashboard-container .card-icon-orange { background-color: #f5a623 !important; }
+
+
+/* Tabbed Bookings Section within Admin Dashboard */
+.admin-dashboard-container .dashboard-card-large {
+    border-radius: 1rem; /* Consistent large card rounded corners */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08); /* Same shadow as info cards */
+}
+
+.admin-dashboard-container .dashboard-tabs-header {
+    background-color: #ffffff !important; /* White background for tab header area */
+    border-bottom: 1px solid #e0e0e0; /* Subtle border below tabs */
+    padding-bottom: 0 !important; /* Ensure tabs sit right on the border */
+}
+
+.admin-dashboard-container .card-header-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent; /* Underline effect for tabs */
+    color: #555;
+    font-weight: 600;
+    padding: 0.9rem 1.5rem; /* More padding for larger tabs */
+    transition: all 0.3s ease;
+    border-radius: 0.75rem 0.75rem 0 0; /* More rounded top corners */
+    margin-right: 0.5rem; /* Space between tabs */
+    font-size: 1rem;
+}
+
+.admin-dashboard-container .card-header-tabs .nav-link.active {
+    color: #4a90e2; /* Active tab color (our blue) */
+    border-bottom-color: #4a90e2; /* Active tab underline */
+    background-color: #f7f9fc; /* Light background for active tab */
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.02); /* Very subtle inner shadow for active tab */
+}
+
+.admin-dashboard-container .card-header-tabs .nav-link:hover:not(.active) {
+    color: #4a90e2;
+    background-color: #f0f2f5; /* Light hover background */
+}
+
+.admin-dashboard-container .tab-content {
+    padding-top: 1.5rem; /* More space above content */
+}
+
+/* Table Styling for Dashboard Bookings (within admin-dashboard-container) */
+.admin-dashboard-container .dashboard-table {
+    width: 100%;
+    margin-top: 1rem;
+    border-spacing: 0;
+    border-collapse: separate; /* Needed for border-radius on elements */
+}
+
+.admin-dashboard-container .dashboard-table thead th {
+    background-color: #f0f2f5; /* Very light grey header background */
+    color: #555;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding: 1.2rem 1.5rem; /* More padding in table header */
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+}
+
+.admin-dashboard-container .dashboard-table tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.admin-dashboard-container .dashboard-table tbody tr:hover {
+    background-color: #fdfdfd; /* Subtle hover effect */
+}
+
+.admin-dashboard-container .dashboard-table tbody td {
+    padding: 1rem 1.5rem; /* More padding in table cells */
+    vertical-align: middle;
+    border-bottom: 1px solid #f2f2f2; /* Lighter cell borders */
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.admin-dashboard-container .dashboard-table tbody tr:last-child td {
+    border-bottom: none; /* No border for the last row */
+}
+
+/* Status Badges */
+.admin-dashboard-container .status-badge {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    border-radius: 0.5rem;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.admin-dashboard-container .status-pending { background-color: #f5a623; } /* Orange */
+.admin-dashboard-container .status-confirmed { background-color: #4a90e2; } /* Blue */
+.admin-dashboard-container .status-completed { background-color: #50c47b; } /* Green */
+.admin-dashboard-container .status-cancelled { background-color: #e74c3c; } /* Red */
+
+/* Manage Button in table */
+.admin-dashboard-container .manage-button {
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    color: #6c757d;
+    padding: 0.4rem 0.7rem;
+    background-color: #f8f9fa;
+}
+
+.admin-dashboard-container .manage-button:hover {
+    background-color: #e2e6ea;
+    color: #495057;
+}
+
+
+/* Admin Quick Links Panel specific styling */
+.admin-dashboard-container .admin-quick-links .list-group-item {
+    border: none; /* Remove default list-group-item borders */
+    border-radius: 0.5rem; /* Slightly rounded for list items */
+    margin-bottom: 0.5rem; /* Space between items */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+    color: #34495e;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow for each item */
+}
+
+.admin-dashboard-container .admin-quick-links .list-group-item:hover {
+    background-color: #e9ecef; /* Light hover background */
+    color: #2c3e50; /* Darker text on hover */
+    transform: translateX(3px); /* Slight slide effect */
+}
+
+.admin-dashboard-container .admin-quick-links .list-group-item i {
+    color: #4a90e2; /* Icon color consistent with dashboard theme */
+}
+
+/* Slider Container */
+.hero-slider {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ======= CLEAN PHOTO SLIDER CAPTION STYLING (UPDATED FONTS) ======= */
+
+.carousel-caption {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0); /* light transparent overlay */
+    border-radius: 1rem;
+    z-index: 10;
+}
+
+.carousel-caption h1 {
+    font-family: Courier New, courier, serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+.carousel-caption p {
+    font-family: Courier New, courier, serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #f1f1f1;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    line-height: 1.6;
+}
+
+.carousel-caption .btn {
+    margin-top: 1rem;
+    font-family: Courier New, courier, serif;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .carousel-caption .btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+}
+
+/* Make logo size responsive */
+.logo-img {
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+
+    .navbar {
+        height: auto;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar .btn {
+        display: block;
+        margin: 0.5rem auto;
+    }
+}
+
+/* Re-enable sticky footer */
+footer {
+    width: 100%;
+    background-color: #000000 !important; /* Black */
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-top: auto; /* This pushes the footer to the bottom */
+    text-align: center;
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 1s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
